@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import React from "react";
+import {GetServerSideProps} from "next";
 
 export default function RootLayout({children}:{
   children: React.ReactNode
@@ -12,6 +13,5 @@ export default function RootLayout({children}:{
     </html>
   )
 }
-
 
 
