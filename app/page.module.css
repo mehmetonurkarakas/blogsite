@@ -1,3 +1,9 @@
 .container{
+    width: 100%;
     text-align: center;
+    height: auto;
+}
+
+.list {
+    list-style-type: none;
 }
