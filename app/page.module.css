@@ -2,8 +2,31 @@
     width: 100%;
     text-align: center;
     height: auto;
+    display: inline-grid;
+    place-items: center;
+    font-family: montserrat,helvetica neue,sans-serif;
+}
+
+.topLinks{
+    text-align: right;
+    padding-top: 10px;
+}
+
+.linkedinIcon{
+    width: 2%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.searchIcon{
+    width: 2%;
+    cursor: pointer;
 }
 
 .list {
     list-style-type: none;
+    text-align: left;
 }
+.customDate{
+    text-align: left;
+}
+
