@@ -1,10 +1,28 @@
+@font-face {
+    src: url(../public/CONSOLA.TTF);
+    font-family: consola;
+}
+
 .container{
     width: 100%;
     text-align: center;
     height: auto;
     display: inline-grid;
     place-items: center;
-    font-family: montserrat,helvetica neue,sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
+    color: #333;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2173913043;
+    color: #1a1a1a;
+}
+.underTitle{
+    font-size: 0.9rem;
+    color: #333;
 }
 
 .topLinks{
@@ -16,17 +34,97 @@
     width: 2%;
     cursor: pointer;
     margin-left: 10px;
+    color: #686868;
 }
 .searchIcon{
     width: 2%;
     cursor: pointer;
+    color: #333;
 }
 
 .list {
     list-style-type: none;
     text-align: left;
 }
-.customDate{
-    text-align: left;
+
+.contentLink{
+    color: #333;
+    text-decoration: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
+.customYear{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.customDate{
+    font-family: consola, Monospace, serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.content{
+    margin-top:2rem;
+    font-family: montserrat,helvetica neue,sans-serif;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    display: inline-grid;
+    line-height: 1.75;
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.contexts{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 50rem;
+    text-align: left;
+    place-items: center;
+    margin: auto;
+}
+
+.navLinks{
+    white-space: nowrap;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+.prevNext{
+    display: inline-block;
+    positon: relative;
+    height: 200px;
+    text-decoration: none;
+    place-items: center;
+    text-align: left;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.07rem;
+    color: #686868;
+    width: 50%;
+}
+
+.prevNext1{
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.span1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}

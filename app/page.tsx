@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import {GetServerSideProps} from "next";
 import {Post} from "@/app/models/type";
 import Link from "next/link";
+import slug from "slug";
 
 export default async function Home() {
     let sample = await getData();
@@ -11,29 +12,6 @@ export default async function Home() {
 
     return (
         <div className={styles.container}>
-            <nav className={styles.topLinks}>
-
-
-
-
-                <img className={styles.searchIcon} src = "search.svg" alt="My Happy SVG"/>
-
-                <a href="https://www.linkedin.com/in/cihanyakar/" target="_blank">
-                    <img className={styles.linkedinIcon} src = "linkedin-in.svg" alt="My Happy SVG"/>
-                </a>
-            </nav>
-            <header>
-                <picture>
-                    <Image
-                        src="/foto.jpg"
-                        alt="Profile Picture"
-                        width={60}
-                        height={60}>
-                    </Image>
-                </picture>
-                <h1>Cihan Yakar Blog</h1>
-                <p>developer</p>
-            </header>
             <div>
                 <ul>
                     {
@@ -42,17 +20,23 @@ export default async function Home() {
                                 date = post.createdAt.getFullYear();
                                 return (
                                     <li className={styles.list} key={post.title}>
-                                        <h3 className={styles.customDate}>-{post.createdAt.getFullYear()}-</h3>
-                                        <h4 className={styles.customDate}>{post.createdAt.getDay()}  {post.createdAt.getMonth()}
-                                            <Link href="#"> {post.title}</Link>
+                                        <h3 className={styles.customYear}>- {post.createdAt.getFullYear()} -</h3>
+                                        <h4 className={styles.customDate}>{post.createdAt.getDay()}  Mar
+                                            <Link className={styles.contentLink}
+                                                  href={`/blog/${post.title}`}
+                                                  as = {`/blog/${slug(post.title)}/`}>
+                                                {post.title}</Link>
                                         </h4>
                                     </li>
                                 )
                             }
                             return (
                                 <li className={styles.list} key={post.title}>
-                                    <h4 className={styles.customDate}>{post.createdAt.getDay()} {post.createdAt.getMonth()}
-                                        <Link href="#"> {post.title}</Link>
+                                    <h4 className={styles.customDate}>{post.createdAt.getDay()} Mar
+                                        <Link className={styles.contentLink}
+                                              as={`/blog/${post.title}`}
+                                              href = {`/blog/${slug(post.title)}-/`}>
+                                            {post.title}</Link>
                                     </h4>
                                 </li>
                             )
@@ -62,7 +46,7 @@ export default async function Home() {
                 </ul>
             </div>
             <footer>
-                Footer
+
             </footer>
         </div>
     )
@@ -72,23 +56,29 @@ async function getData() {
     const sample: Post[] = [
         {
             createdAt: new Date("2021-11-08"),
-            title: "Birinci yazım Birinci yazım Birinci yazım Birinci yazım Birinci yazım"
+            title: "Birinci yazım Birinci yazım Birinci yazım Birinci yazım Birinci yazım",
+            content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         },
         {
             createdAt: new Date("2021-12-06"),
-            title: "İkinci yazım"
+            title: "Ikinci yazım",
+            content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         },{
             createdAt: new Date("2021-12-06"),
-            title: "3 yazım"
+            title: "3 yazım",
+            content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         },{
             createdAt: new Date("2022-12-06"),
-            title: "4 yazım"
+            title: "4 yazım",
+            content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         },{
             createdAt: new Date("2022-12-06"),
-            title: "5 yazım"
+            title: "5 yazım",
+            content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         },{
             createdAt: new Date("2023-12-06"),
-            title: "6 yazım"
+            title: "Ilk yazim",
+            content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         },
     ];
     return sample;
