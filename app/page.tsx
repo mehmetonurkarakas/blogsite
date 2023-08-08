@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import {GetServerSideProps} from "next";
-import {Post} from "@/app/models/type";
+import {Post} from "@/app/dbModel/dbData";
 import Link from "next/link";
 import slug from "slug";
 
@@ -34,14 +34,13 @@ export default async function Home() {
                                 <li className={styles.list} key={post.title}>
                                     <h4 className={styles.customDate}>{post.createdAt.getDay()} Mar
                                         <Link className={styles.contentLink}
-                                              as={`/blog/${post.title}`}
+                                              as={`/blog/${slug(post.title)}`}
                                               href = {`/blog/${slug(post.title)}-/`}>
                                             {post.title}</Link>
                                     </h4>
                                 </li>
                             )
                         })
-
                     }
                 </ul>
             </div>
