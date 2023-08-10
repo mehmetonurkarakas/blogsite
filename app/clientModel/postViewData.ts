@@ -1,7 +1,7 @@
-export type blogPosts = {
-    createdAt : string,
-    title : string,
-    content : string,
-    previousPost:URL,
-    nextPostId : URL,
+export type PostViewData = {
+    publishedDate : Date | undefined,
+    title : string|undefined,
+    htmlContent : string,
+    previousPostUri:string,
+    nextPostUri : string,
 }
