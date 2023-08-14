@@ -1,5 +1,5 @@
 import React from "react";
-import Page from "@/app/(admin)/admin/page";
+
 
 export default function RootLayout({children}:{
     children: React.ReactNode

@@ -1,4 +1,4 @@
-import '../../global.css'
+import '../../../global.css'
 
 export default function Page() {
 
@@ -79,7 +79,7 @@ export default function Page() {
                 <div className="overview">
                     <div className="title">
                         <i className="uil uil-tachometer-fast-alt"></i>
-                        <span className="text">Yazılar</span>
+                        <span className="text">Edit</span>
                     </div>
                     <div className="activity">
                         <div className="activity-data">
