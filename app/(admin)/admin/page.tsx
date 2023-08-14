@@ -1,5 +1,6 @@
 import '../global.css'
 import {Post} from "@/app/dbData/dbData";
+import Link from "next/link";
 
 export default function Page() {
 
@@ -60,8 +61,6 @@ export default function Page() {
                             <i className="uil uil-signout"></i>
                             <span className="link-name">Logout</span>
                         </a></li>
-
-
                     </ul>
                 </div>
             </nav>
@@ -83,6 +82,48 @@ export default function Page() {
                         <div className="title">
                             <i className="uil uil-tachometer-fast-alt"></i>
                             <span className="text">Yazılar</span>
+                        </div>
+                        <div className="activity">
+                            <div className="activity-data">
+                                <div className="data names">
+                                    <span className="data-title">Name</span>
+                                    {
+                                        sample.map((post: Post) => {
+                                            return (
+                                                <h4 key={post.title}>
+                                                    <Link
+                                                        href={`/admin/edit`}
+                                                        as = {`/admin/edit`}>
+                                                        {/*// as = {`/admin/${slug(post.title)}/`}>*/}
+                                                        {post.title}</Link>
+                                                </h4>
+                                            )
+                                        })
+                                    }
+                                    {/*<table>*/}
+                                    {/*    <thead>*/}
+                                    {/*    <tr>*/}
+                                    {/*        <th>*/}
+                                    {/*            Title*/}
+                                    {/*        </th>*/}
+                                    {/*        <th>*/}
+                                    {/*            Author*/}
+                                    {/*        </th>*/}
+                                    {/*        <th>*/}
+                                    {/*            Category*/}
+                                    {/*        </th>*/}
+                                    {/*        <th>*/}
+                                    {/*            Labels*/}
+                                    {/*        </th>*/}
+                                    {/*    </tr>*/}
+
+                                    {/*    </thead>*/}
+                                    {/*    <tbody>*/}
+                                    {/*        */}
+                                    {/*    </tbody>*/}
+                                    {/*</table>*/}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
