@@ -14,18 +14,6 @@
     color: #333;
 }
 
-/*.container{*/
-/*    width: 50%;*/
-/*    text-align: center;*/
-/*    height: auto;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    place-items: center;*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*    line-height: 1.75;*/
-/*    color: #333;*/
-/*}*/
 
 .title {
     font-size: 1.8rem;
@@ -40,20 +28,29 @@
 
 .topLinks{
     text-align: right;
-    padding-top: 10px;
+    padding: 2%;
+
+}
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right:11%;
 }
 
 .linkedinIcon{
-    width: 2%;
+    width: 1%;
     cursor: pointer;
-    margin-left: 10px;
     color: #686868;
 }
+
 .searchIcon{
-    width: 2%;
+    width: 5%;
     cursor: pointer;
     color: #333;
+    margin-right: 6%;
 }
+
 
 .list {
     list-style-type: none;
@@ -79,7 +76,6 @@
     font-style: normal;
     font-size: 20px;
     font-weight: 400;
-
 }
 
 .content{

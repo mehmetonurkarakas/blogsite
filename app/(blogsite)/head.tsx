@@ -1,19 +1,29 @@
 import styles from './page.module.css'
 import Image from "next/image";
+import { StrictMode } from "react";
+import PopUp from "@/app/(blogsite)/blog/PopUp";
+
+
 
 export default function HeadComponent() {
     return (
         <>
-            <div className={styles.container}>
+
             <nav className={styles.topLinks}>
+                <div className={styles.iconContainer}>
+                    <StrictMode>
+                        <PopUp/>
+                    </StrictMode>
 
-                <img className={styles.searchIcon} src = "/search.svg" alt="My Happy SVG"/>
-
-                <a href="https://www.linkedin.com/in/cihanyakar/" target="_blank">
-                    <img className={styles.linkedinIcon} src = "/linkedin-in.svg" alt="My Happy SVG"/>
-                </a>
+                    <a className={styles.linkedinIcon} href="https://www.linkedin.com/in/cihanyakar/" target="_blank">
+                        <img  src = "/linkedin-in.svg" alt="My Happy SVG"/>
+                    </a>
+                </div>
             </nav>
+            <div className={styles.container}>
+
             <header>
+
                 <picture>
                     <Image
                         src="/foto.jpg"
