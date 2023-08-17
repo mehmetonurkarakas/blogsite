@@ -2,11 +2,8 @@ import styles from './page.module.css'
 import {Post} from "@/app/dbData/dbData";
 import Link from "next/link";
 import slug from "slug";
-import {getPostView} from "@/bll/post";
-
 export default async function Home() {
     let sample = await getData();
-    console.log("sample",sample)
     sample.reverse();
     let date = 0;
 
@@ -55,6 +52,7 @@ async function getData() {
 
     const sample: Post[] = [
         {
+            id: 1,
             title: "Birinci yazım Birinci yazım Birinci yazım Birinci yazım Birinci yazım",
             content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
             category: "deneme",
@@ -65,6 +63,7 @@ async function getData() {
             modifiedAt: new Date("2021-11-10")
         },
         {
+            id: 2,
             title: "İKinci yazım İKinci yazım İKinci yazım İKinci yazım İKinci yazım",
             content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
             category: "deneme",
@@ -75,6 +74,7 @@ async function getData() {
             modifiedAt: new Date("2021-11-10"),
         },
         {
+            id: 3,
             title: "Üçüncü yazım Üçüncü yazım Üçüncü yazım ",
             content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
             category: "deneme",
@@ -85,6 +85,7 @@ async function getData() {
             modifiedAt: new Date("2021-11-10"),
         },
         {
+            id: 4,
             title: "Dördüncü yazım Dördüncü yazım Dördüncü ",
             content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
             category: "deneme",

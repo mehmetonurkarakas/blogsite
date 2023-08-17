@@ -1,4 +1,5 @@
 export type Post = {
+    id : number,
     title : string,
     content : string,
     category : string,
@@ -8,4 +9,3 @@ export type Post = {
     publishedAt : Date,
     modifiedAt : Date,
 }
-

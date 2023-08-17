@@ -8,9 +8,7 @@ export default async function Page({params}: { params: { id: string } }) {
     const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
     const newSentence = capitalizedWords.join(" ");
 
-
     let sample = await getData();
-
 
     return (
         <>
@@ -36,51 +34,6 @@ export default async function Page({params}: { params: { id: string } }) {
 }
 
 async function getData() {
-
     return getPostView();
-
-    // const sample: Post[] = [
-    //     {
-    //         title: "Birinci yazım Birinci yazım Birinci yazım ",
-    //         content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-    //         category: "deneme",
-    //         labels: ["deneme1", "deneme2"],
-    //         createdAt: new Date("2021-11-08"),
-    //         slug: "birinci-yazim",
-    //         publishedAt: new Date("2021-11-09"),
-    //         modifiedAt: new Date("2021-11-10"),
-    //     },
-    //     {
-    //         title: "İKinci yazım İKinci yazım İKinci yazım",
-    //         content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-    //         category: "deneme",
-    //         labels: ["deneme1", "deneme2"],
-    //         createdAt: new Date("2021-11-08"),
-    //         slug: "birinci-yazim",
-    //         publishedAt: new Date("2022-11-09"),
-    //         modifiedAt: new Date("2021-11-10"),
-    //     },
-    //     {
-    //         title: "Üçüncü yazım Üçüncü yazım Üçüncü yazım",
-    //         content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-    //         category: "deneme",
-    //         labels: ["deneme1", "deneme2"],
-    //         createdAt: new Date("2021-11-08"),
-    //         slug: "birinci-yazim",
-    //         publishedAt: new Date("2022-11-09"),
-    //         modifiedAt: new Date("2021-11-10"),
-    //     },
-    //     {
-    //         title: "Dördüncü yazım Dördüncü yazım Dördüncü yazım",
-    //         content: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-    //         category: "deneme",
-    //         labels: ["deneme1", "deneme2"],
-    //         createdAt: new Date("2021-11-08"),
-    //         slug: "birinci-yazim",
-    //         publishedAt: new Date("2023-11-09"),
-    //         modifiedAt: new Date("2021-11-10"),
-    //     }
-    // ];
-    // return sample;
 }
 

@@ -455,3 +455,32 @@ nav.close ~ .dashboard .top{
         width: 100%;
     }
 }
+.data-names{
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.forms{
+    padding: 20px;
+}
+
+.inpt{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: horizontal;
+}
+
+
+.button {
+    margin-top: 5px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+

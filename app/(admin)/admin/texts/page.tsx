@@ -1,13 +1,15 @@
-import '../global.css'
-
-export default function Page() {
+import '../../global.css'
+import {Post} from "@/app/dbData/dbData";
+import Link from "next/link";
+import {getAdminData} from "@/app/(admin)/adminBackend/getData";
+export default async function Page() {
+    let sample: Post[] = getAdminData();
 
     return (
         <body>
         <nav>
             <div className="logo-name">
                 <div className="logo-image">
-                    {/*<img src="images/logo.png" alt="">*/}
                 </div>
 
                 <span className="logo_name">Admin Panel</span>
@@ -15,12 +17,10 @@ export default function Page() {
 
             <div className="menu-items">
                 <ul className="nav-links">
-                    <li>
-                        <a href="/admin/texts">
+                    <li><a href="#">
                         <i className="uil uil-estate"></i>
                         <span className="link-name">Texts</span>
-                        </a>
-                    </li>
+                    </a></li>
                     <li>
                         <a href="/admin/texts">
                             <i className="uil uil-estate"></i>
@@ -54,11 +54,25 @@ export default function Page() {
                 <div className="overview">
                     <div className="title">
                         <i className="uil uil-tachometer-fast-alt"></i>
-                        <span className="text">HomePage</span>
+                        <span className="text">Texts</span>
                     </div>
                     <div className="activity">
                         <div className="activity-data">
                             <div className="data names">
+                                <span className="data-title">Name</span>
+                                {
+                                    sample.map((post: Post) => {
+                                        return (
+                                            <h4 key={post.title}>
+                                                <Link
+                                                    href={`/admin/texts/edit/${post.id}`}
+                                                    as={`/admin/texts/edit/${post.id}`}>
+                                                    {/*// as={`/admin/texts/edit/${slug(post.title)}:id=${post.id}`}>*/}
+                                                    {post.title}</Link>
+                                            </h4>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

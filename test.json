@@ -1,0 +1,37 @@
+{
+  "title": [
+    {
+      "id": 1,
+      "title": "Lorem Ipsum Dolor Sit Amet",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sapien sem. Suspendisse potenti. Mauris non mauris auctor, rutrum urna sit amet, blandit metus. Sed a tellus feugiat, posuere nulla ut, aliquet lacus.",
+      "category": "News",
+      "labels": ["Tech", "Updates"],
+      "slug": "lorem-ipsum-dolor-sit-amet",
+      "createdAt": "2023-08-14",
+      "publishedAt": "2023-08-15",
+      "modifiedAt": "2023-08-16"
+    },
+    {
+      "id": 2,
+      "title": "Amet Consectetur Adipiscing Elit",
+      "content": "Amet consectetur adipiscing elit. Sed vulputate, nulla eget laoreet venenatis, risus nisi condimentum arcu, ut tristique ligula orci ut purus. Nam id ligula in mauris sollicitudin convallis. In hac habitasse platea dictumst.",
+      "category": "Tutorial",
+      "labels": ["Programming", "Web Development"],
+      "slug": "amet-consectetur-adipiscing-elit",
+      "createdAt": "2023-08-17",
+      "publishedAt": "2023-08-18",
+      "modifiedAt": "2023-08-19"
+    },
+    {
+      "id": 3,
+      "title": "Dolor Sit Amet Eiusmod Tempor",
+      "content": "Dolor sit amet eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "category": "Opinion",
+      "labels": ["Politics", "Social Issues"],
+      "slug": "dolor-sit-amet-eiusmod-tempor",
+      "createdAt": "2023-08-20",
+      "publishedAt": "2023-08-21",
+      "modifiedAt": "2023-08-22"
+    }
+  ]
+}
