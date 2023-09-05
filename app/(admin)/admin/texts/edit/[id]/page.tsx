@@ -5,10 +5,7 @@ import {Post} from "@/app/dbData/dbData";
 import React, {useState} from 'react';
 export default function Page({params}: { params: { id: number } }) {
     const id = params.id;
-
-
     let sample: Post[] = getAdminData();
-
     let obj: Post;
     for (obj of sample) {
         if (obj.id == id) {
@@ -21,6 +18,7 @@ export default function Page({params}: { params: { id: number } }) {
         content: obj.content,
     })
 
+
     const inputsHandler = (e) => {
         const {name, value} = e.target;
         setInputField((prevState) => ({
@@ -29,58 +27,31 @@ export default function Page({params}: { params: { id: number } }) {
         }));
     }
 
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+    const [topic, setTopic] = useState("");
 
-    const submitButton = () => {
-        alert("Data saved!");
 
-
+    const submitButton = async () => {
+        console.log(inputField);
+        await fetch('/api/hello', {
+            method: 'PUT',
+            body: JSON.stringify({inputField}),
+        })
+        alert("Saved")
+        console.log()
+        // window.location.reload()
     }
-    
 
     return (
-        <body>
-        <nav>
-            <div className="logo-name">
-                <div className="logo-image">
-                    {/*<img src="images/logo.png" alt="">*/}
-                </div>
-
-                <span className="logo_name">Admin Panel</span>
-            </div>
-
-            <div className="menu-items">
-                <ul className="nav-links">
-                    <li><a href="#">
-                        <i className="uil uil-estate"></i>
-                        <span className="link-name">Texts</span>
-                    </a></li>
-                    <li>
-                        <a href="/admin/texts">
-                            <i className="uil uil-estate"></i>
-                            <span className="link-name">Comments</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <ul className="logout-mode">
-                    <li><a href="#">
-                        <i className="uil uil-signout"></i>
-                        <span className="link-name">Logout</span>
-                    </a></li>
-                </ul>
-            </div>
-        </nav>
-
         <section className="dashboard">
             <div className="top">
                 <i className="uil uil-bars sidebar-toggle"></i>
 
                 <div className="search-box">
                     <i className="uil uil-search"></i>
-                    {/*<input type="text" placeholder="Search here...">*/}
+                    <input type="text" placeholder="Search..."/>
                 </div>
-
-                {/*<img src="images/profile.jpg" alt="">*/}
             </div>
 
             <div className="dash-content">
@@ -115,7 +86,6 @@ export default function Page({params}: { params: { id: number } }) {
                                     </label>
                                     <button className="button button1"
                                             onClick={submitButton}
-
                                     >Save</button>
                                 </form>
                             </div>
@@ -124,6 +94,5 @@ export default function Page({params}: { params: { id: number } }) {
                 </div>
             </div>
         </section>
-        </body>
     );
 }

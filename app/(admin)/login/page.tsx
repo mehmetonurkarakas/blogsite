@@ -15,8 +15,7 @@ const LoginForm: React.FC = () => {
 
     const router = useRouter()
   const handleLogin = (e) => {
-      e.preventDefault()
-      router.push("../admin")
+      // router.push("/admin")
   }
 
   return (
@@ -24,16 +23,20 @@ const LoginForm: React.FC = () => {
       <div className="bg" id="bg">
           <img src="/background.jpeg" alt="me" width="2877" height="1847" />
       </div>
-      <form>
+      <form method="POST"  >
           <div className="form-field">
+              <img src="/user-icon.png" alt="logo" width="40" height="40" />
               <input type="email" placeholder="Username" required/>
           </div>
 
           <div className="form-field">
-              <input type="password" placeholder="Password" required/></div>
-              <div className="form-field">
-                  <button onClick={handleLogin} className="btn" type="submit">Log in</button>
-              </div>
+              <img src="/lock-icon.png" alt="logo" width="40" height="40" />
+              <input type="password" placeholder="Password" required/>
+          </div>
+          <div className="form-field">
+              <button onClick={handleLogin} className="btn" type="submit">Log in</button>
+          </div>
+
       </form>
       </body>
     );
